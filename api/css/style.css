@@ -1,0 +1,68 @@
+/* General Styles */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+    padding: 60px 0;
+}
+
+/* Categories Section */
+.category-card {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Products Section */
+.product-card {
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-image {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Rating Stars */
+.rating {
+    color: #ffc107;
+}
+
+/* Footer */
+footer {
+    margin-top: auto;
+}
+
+/* Product Details Page */
+.product-details-image {
+    max-height: 400px;
+    object-fit: contain;
+}
+
+/* Products Page */
+.sort-controls {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.pagination {
+    justify-content: center;
+    margin-top: 30px;
+}

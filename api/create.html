@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Product - Product Store</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Product Store</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="products.html">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="create.html">Create Product</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Create Product Form Section -->
+    <section class="create-product py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Create New Product</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <form id="create-product-form">
+                        <div class="mb-3">
+                            <label for="title" class="form-label">Product Title</label>
+                            <input type="text" class="form-control" id="title" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="description" class="form-label">Description</label>
+                            <textarea class="form-control" id="description" rows="3" required></textarea>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label for="price" class="form-label">Price</label>
+                                <input type="number" class="form-control" id="price" min="0" step="0.01" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="stock" class="form-label">Stock</label>
+                                <input type="number" class="form-control" id="stock" min="0" required>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label for="brand" class="form-label">Brand</label>
+                                <input type="text" class="form-control" id="brand" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="category" class="form-label">Category</label>
+                                <select class="form-select" id="category" required>
+                                    <!-- Categories will be loaded here -->
+                                </select>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="thumbnail" class="form-label">Thumbnail URL</label>
+                            <input type="url" class="form-control" id="thumbnail" required>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary">Create Product</button>
+                        </div>
+                    </form>
+                    <!-- Toast Notification -->
+                    <div class="position-fixed top-0 end-0 p-3" style="z-index: 1055">
+                        <div id="createToast" class="toast align-items-center text-bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
+                            <div class="d-flex">
+                                <div class="toast-body">
+                                    Product created successfully!
+                                </div>
+                                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Product Store</h5>
+                    <p>Your one-stop shop for amazing products</p>
+                </div>
+                <div class="col-md-6 text-end">
+                    <p>&copy; 2025 Product Store. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/create.js"></script>
+</body>
+</html>
